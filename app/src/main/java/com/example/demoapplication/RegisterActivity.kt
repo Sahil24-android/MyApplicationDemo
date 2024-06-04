@@ -52,6 +52,10 @@ class RegisterActivity : AppCompatActivity() {
 
             }
         }
+        
+        binding.back.setOnClickListener {
+            finish()
+        }
 
         userViewModel.registerUserResponse.observe(this){response ->
             if (response != null){
